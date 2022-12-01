@@ -1,0 +1,76 @@
+/*Gloabal*/
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: darkkhaki; 
+}
+h2{
+    font-size: 4em;
+}
+/*Boton de ejecución de scripts sql*/
+#ejecutor{
+    padding: 10px;
+    margin-left: 60%;
+    border-radius: 8px;
+    background-color: white;
+    text-align: center;
+}
+/*Tabla de recursos extras*/
+#extras{
+    width: 40vw;
+    margin-top: 30px;
+    margin-left: 20vw;
+    margin-bottom: 30px;
+    border-collapse: collapse;
+}
+#extras>h2{
+    font-size: 4em;
+}
+#extras td,tbody th{
+    border: 4px solid white;
+}
+#extras th{
+    border-right: 4px solid white;
+    font-size: 1.25em;
+    font-weight: bold;
+}
+#extras td{
+    width: 5vw;
+    padding-left: 1%;
+}
+#extras img{
+    width: 3vw;
+}
+/*Tablan de ejercicios*/
+section{
+    background-image: url(../../doc/mariadb.png);
+    background-repeat: no-repeat;
+    background-size: 80em;
+    background-position-x: 0px;
+}
+section img{
+    width: 100px;
+}
+#ejercicios{
+    border-top: 4px solid white;
+}
+#ejercicios tr>td:nth-of-type(1){
+    max-width: 50vw;
+    max-height: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+#ejercicios td{
+    padding: 4px;
+    vertical-align: middle;
+    border-right: 4px solid white;
+}
+#ejercicios th{
+    font-size: 3em;
+    padding: 20px;
+    border: 4px solid white;
+}
+.PDO>a{
+    margin-left: 25%
+}
