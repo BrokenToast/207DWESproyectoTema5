@@ -62,6 +62,10 @@ while(!isset($_SERVER['PHP_AUTH_USER']) || !existUser($_SERVER['PHP_AUTH_USER'],
                         $oQuery=$odbDepartamentos->prepare('update T02_Usuario set NumConexiones=NumConexiones+1 where CodUsuario=?');
                         $oQuery->bindParam(1,$user);
                         $oQuery->execute();
+                        $odbDepartamentos->prepare('update T02_Usuario set FechaHoraUltimaConexion=? where CodUsuario=?');
+                        $oQuery->bindParam(1,time());
+                        $oQuery->bindParam(2,$_REQUEST['usuario']);
+                        $oQuery->execute();
                     }
                     $oQuery=$odbDepartamentos->prepare('select NumConexiones, FechaHoraUltimaConexion from T02_Usuario where CodUsuario=?');
                     $oQuery->bindParam(1,$user);

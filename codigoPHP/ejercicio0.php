@@ -24,6 +24,7 @@
                 * @size 
                 */
                 //Recorrido con un foreach la variable superglobal $_SERVER
+                session_start();
                 ?>
                  <div>
                     <h3>$GLOBALS</h3> 
@@ -66,7 +67,7 @@
                         </table> 
                     <?php
                         }
-                        if(!isset($varSesion)){
+                        if(!isset($_SESSION)){
                             ?>
                             <table>
                                 <tr>
