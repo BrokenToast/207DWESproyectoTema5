@@ -1,9 +1,9 @@
 <?php
 /**
-* Ejercicio 1
+* Ejercicio 2
 * @author: Luis Pérez Astorga
-* @version: 1.0
-* @size 
+* @version: 1.1
+* @since 05/12/2022
 */
 //Recorrido con un foreach la variable superglobal $_SERVER
 require_once '../config/confConexion.php';
@@ -17,13 +17,13 @@ function existUser(String $usuario, String $password){
         $oQuery->bindParam(2,$aParametros['user']);
         $oQuery->bindParam(3,$aParametros['password']);
         $oQuery->execute();
+        if($oQuery->rowCount()>0){
+            return true;
+        }
     } catch (PDOException $th) {
         print $th->getMessage();
     }finally{
         unset($odbDepartamentos);
-    }
-    if($oQuery->rowCount()>0){
-        return true;
     }
     return false;
 }
