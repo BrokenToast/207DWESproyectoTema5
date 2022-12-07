@@ -26,9 +26,19 @@
                 //Recorrido con un foreach la variable superglobal $_SERVER
                 ?>
                  <div>
-                    <h3>$GLOBALS</h3> 
                     <?php
-                    foreach($GLOBALS as $nomVariable=>$aVariableSuper ){
+                    $putoheraclio=[
+                        "_SESSION"=>$_SESSION?? array(),
+                        "GLOBALS"=>$GLOBALS,
+                        "_SERVER"=>$_SERVER,
+                        "_GET"=>$_GET,
+                        "_POST"=>$_POST,
+                        "_FILES"=>$_FILES,
+                        "_REQUEST"=>$_REQUEST,
+                        "_ENV"=>$_ENV,
+                        "_COOKIE"=>$_COOKIE];
+                    session_start();
+                    foreach($putoheraclio as $nomVariable=>$aVariableSuper ){
                         if ($nomVariable=="_SESION") {
                             $varSesion=false;
                         }
@@ -58,25 +68,13 @@
                                     ?>  
                                     <tr>
                                         <td><?php print $clave; ?></td>
-                                        <td><?php print $valor; ?></td>
+                                        <td><?php print_r($valor); ?></td>
                                     </tr>
                                     <?php
                                 }
                             ?>
                         </table> 
                     <?php
-                        }
-                        if(!isset($varSesion)){
-                            ?>
-                            <table>
-                                <tr>
-                                    <th><?php print "_SESION" ?></th>
-                                </tr>
-                                <tr>
-                                    <td>Esta vacia</td>
-                                </tr>
-                            </table> 
-                            <?php
                         }
                     ?>
                 </div>
