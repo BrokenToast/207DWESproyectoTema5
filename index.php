@@ -46,6 +46,10 @@
                         <td><a href="./config/verconfigDesarrollo.php"><img src="./doc/hoja_Papel.png" alt="Archivos"></a></td>
                         <td><a href="./config/verconfigExplotacion.php"><img src="./doc/hoja_Papel.png" alt="Archivos"></a></td>
                     </tr>
+                    <tr>
+                        <th>Libreria de validación</th>
+                        <td colspan="2"><a href="./core/mostrarValidacion.php"><img src="./doc/hoja_Papel.png" alt="Archivos"></a></td>
+                    </tr>
                 </tbody>
             </table>
             <h2>Ejericicios Tema 5</h2>

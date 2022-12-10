@@ -21,13 +21,21 @@
                 * Ejercicio 0
                 * @author: Luis Pérez Astorga
                 * @version: 1.0
-                * @size 
+                * @since 2/12/2022
                 */
                 //Recorrido con un foreach la variable superglobal $_SERVER
+                session_start();
                 ?>
+<<<<<<< HEAD:codigoPHP/ejercicio0.php
                  <div>
                     <?php
                     $putoheraclio=[
+=======
+                 <div id=super>
+                    <?php
+                    //Delcaración de un array con todas las superglobales
+                    $aVairablesSuper=[
+>>>>>>> b52aee6d335675e6aa77c20e624b9bd1043b9885:codigo/ejercicio0.php
                         "_SESSION"=>$_SESSION?? array(),
                         "GLOBALS"=>$GLOBALS,
                         "_SERVER"=>$_SERVER,
@@ -37,11 +45,17 @@
                         "_REQUEST"=>$_REQUEST,
                         "_ENV"=>$_ENV,
                         "_COOKIE"=>$_COOKIE];
+<<<<<<< HEAD:codigoPHP/ejercicio0.php
                     session_start();
                     foreach($putoheraclio as $nomVariable=>$aVariableSuper ){
+=======
+                    // Recorremos el  la array de SuperGlobales y la imprimimos como tablas;
+                    foreach($aVairablesSuper as $nomVariable=>$aVariableSuper ){
+>>>>>>> b52aee6d335675e6aa77c20e624b9bd1043b9885:codigo/ejercicio0.php
                         if ($nomVariable=="_SESION") {
                             $varSesion=false;
                         }
+                        //En caso de que la SuperGlobal este vaica muesta esta tabla;
                         if(empty($aVariableSuper)){
                             ?>
                             <table>
@@ -53,8 +67,8 @@
                                 </tr>
                             </table> 
                             <?php
-                            continue;
-                        }
+                        }else{
+                        // En caso de que no este vacia muestra el contenido como en una tabla
                         ?><table>
                             <tr>
                                 <th colspan="2"><?php print $nomVariable; ?></th>
@@ -76,6 +90,10 @@
                         </table> 
                     <?php
                         }
+<<<<<<< HEAD:codigoPHP/ejercicio0.php
+=======
+                    }
+>>>>>>> b52aee6d335675e6aa77c20e624b9bd1043b9885:codigo/ejercicio0.php
                     ?>
                 </div>
             <?php phpinfo() ?>
