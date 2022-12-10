@@ -46,6 +46,10 @@
                         <td><a href="./config/verconfigDesarrollo.php"><img src="./doc/hoja_Papel.png" alt="Archivos"></a></td>
                         <td><a href="./config/verconfigExplotacion.php"><img src="./doc/hoja_Papel.png" alt="Archivos"></a></td>
                     </tr>
+                    <tr>
+                        <th>Libreria de validación</th>
+                        <td colspan="2"><a href="./core/mostrarValidacion.php"><img src="./doc/hoja_Papel.png" alt="Archivos"></a></td>
+                    </tr>
                 </tbody>
             </table>
             <h2>Ejericicios Tema 5</h2>
@@ -57,17 +61,17 @@
                 </tr>
                 <tr>
                     <td>0. Mostrar el contenido de las variables superglobales y phpinfo().</td>
-                    <td class="PDO"><a href="./codigo/ejercicio0.php"><img src="./doc/play.png" alt="Ejecutar"></a></td>
+                    <td class="PDO"><a href="./codigoPHP/ejercicio0.php"><img src="./doc/play.png" alt="Ejecutar"></a></td>
                     <td class="PDO"><a href="./mostrarcodigo/mostrarejercicio0.php"><img src="./doc/mostrar_codigo.png" alt="Mostrar"></a></td>
                 </tr>
                 <tr>
                     <td>1. Desarrollo de un control de acceso con identificación del usuario basado en la función header().</td>
-                    <td class="PDO"><a href="./codigo/ejercicio1.php"><img src="./doc/play.png" alt="Ejecutar"></a></td>
+                    <td class="PDO"><a href="./codigoPHP/ejercicio1.php"><img src="./doc/play.png" alt="Ejecutar"></a></td>
                     <td class="PDO"><a href="./mostrarcodigo/mostrarejercicio1.php"><img src="./doc/mostrar_codigo.png" alt="Mostrar"></a></td>
                 </tr>
                 <tr>
                     <td>2. Desarrollo de un control de acceso con identificación del usuario basado en la función header() y en el uso de una tabla “Usuario” de la base de datos. (PDO).</td>
-                    <td class="PDO"><a href="./codigo/ejercicio2.php"><img src="./doc/play.png" alt="Ejecutar"></a></td>
+                    <td class="PDO"><a href="./codigoPHP/ejercicio2.php"><img src="./doc/play.png" alt="Ejecutar"></a></td>
                     <td class="PDO"><a href="./mostrarcodigo/mostrarejercicio2.php"><img src="./doc/mostrar_codigo.png" alt="Mostrar"></a></td>
                 </tr>
             </table>

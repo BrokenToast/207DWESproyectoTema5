@@ -3,19 +3,28 @@
 * Ejercicio 1
 * @author: Luis Pérez Astorga
 * @version: 1.0
-* @size 
+* @since 2/12/2022
 */
 //Recorrido con un foreach la variable superglobal $_SERVER
 require_once '../config/confConexion.php';
+require_once '../core/221024ValidacionFormularios.php';
+/**
+ * existUser
+ * Nos permite comprobar si existe el usuario dentro de la tabla T02_Usuario
+ * @param  String $usuario Usuario que vamos a comprobar que exista.
+ * @param  String $password Contraseña que del usuario.
+ * @return bool Devuelve true si existe y false si no.
+ */
 function existUser(String $usuario, String $password){
-    $aParametros['user']=preg_replace("/[-'\s\"]+/s","",$usuario);
-    $aParametros['password']=preg_replace("/[-'\s\"]+/s","",$password);
+    if(!empty(validacionFormularios::comprobarAlfabetico($usuario,200,1,1)) && !empty(validacionFormularios::comprobarAlfabetico($password,200,1,1))){
+        return false;
+    }
     try{
         $odbDepartamentos=new PDO(HOSTPDO,USER,PASSWORD);
         $oQuery=$odbDepartamentos->prepare('select CodUsuario from T02_Usuario where CodUsuario=? and Password=SHA2(concat(?,?),256)');
-        $oQuery->bindParam(1,$aParametros['user']);
-        $oQuery->bindParam(2,$aParametros['user']);
-        $oQuery->bindParam(3,$aParametros['password']);
+        $oQuery->bindParam(1,$usuario);
+        $oQuery->bindParam(2,$usuario);
+        $oQuery->bindParam(3,$password);
         $oQuery->execute();
     } catch (PDOException $th) {
         print $th->getMessage();
@@ -59,11 +68,12 @@ while(!isset($_SERVER['PHP_AUTH_USER']) || !existUser($_SERVER['PHP_AUTH_USER'],
                 try {
                     $odbDepartamentos=new PDO(HOSTPDO,USER,PASSWORD);
                     if(!isset($_SESSION['userPoryectoDAW'])){
+                        $horaConexion=time();
                         $oQuery=$odbDepartamentos->prepare('update T02_Usuario set NumConexiones=NumConexiones+1 where CodUsuario=?');
                         $oQuery->bindParam(1,$user);
                         $oQuery->execute();
                         $odbDepartamentos->prepare('update T02_Usuario set FechaHoraUltimaConexion=? where CodUsuario=?');
-                        $oQuery->bindParam(1,time());
+                        $oQuery->bindParam(1,$horaConexion);
                         $oQuery->bindParam(2,$_REQUEST['usuario']);
                         $oQuery->execute();
                     }
