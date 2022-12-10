@@ -27,7 +27,7 @@
                 * Ejercicio 1
                 * @author: Luis Pérez Astorga
                 * @version: 1.0
-                * @size 
+                * @since 2/12/2022 
                 */
                 //Recorrido con un foreach la variable superglobal $_SERVER
                 session_start();
