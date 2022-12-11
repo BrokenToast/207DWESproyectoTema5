@@ -26,16 +26,10 @@
                 //Recorrido con un foreach la variable superglobal $_SERVER
                 session_start();
                 ?>
-<<<<<<< HEAD:codigoPHP/ejercicio0.php
-                 <div>
-                    <?php
-                    $putoheraclio=[
-=======
                  <div id=super>
                     <?php
                     //Delcaración de un array con todas las superglobales
                     $aVairablesSuper=[
->>>>>>> b52aee6d335675e6aa77c20e624b9bd1043b9885:codigo/ejercicio0.php
                         "_SESSION"=>$_SESSION?? array(),
                         "GLOBALS"=>$GLOBALS,
                         "_SERVER"=>$_SERVER,
@@ -45,13 +39,8 @@
                         "_REQUEST"=>$_REQUEST,
                         "_ENV"=>$_ENV,
                         "_COOKIE"=>$_COOKIE];
-<<<<<<< HEAD:codigoPHP/ejercicio0.php
-                    session_start();
-                    foreach($putoheraclio as $nomVariable=>$aVariableSuper ){
-=======
                     // Recorremos el  la array de SuperGlobales y la imprimimos como tablas;
                     foreach($aVairablesSuper as $nomVariable=>$aVariableSuper ){
->>>>>>> b52aee6d335675e6aa77c20e624b9bd1043b9885:codigo/ejercicio0.php
                         if ($nomVariable=="_SESION") {
                             $varSesion=false;
                         }
@@ -90,10 +79,7 @@
                         </table> 
                     <?php
                         }
-<<<<<<< HEAD:codigoPHP/ejercicio0.php
-=======
                     }
->>>>>>> b52aee6d335675e6aa77c20e624b9bd1043b9885:codigo/ejercicio0.php
                     ?>
                 </div>
             <?php phpinfo() ?>

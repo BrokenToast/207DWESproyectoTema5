@@ -16,7 +16,7 @@
     <section>
         <article>
         <?php
-            show_source("../codigo/ejercicio1.php");
+            show_source("../codigoPHP/ejercicio1.php");
         ?>
         </article>
     </section>

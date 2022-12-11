@@ -11,12 +11,12 @@
 </head>
 <body>
     <header>
-        <h1>1.Conexión a la base de datos con la cuenta usuario y tratamiento de errores.</h1>
+        <h1>2. Desarrollo de un control de acceso con identificación del usuario basado en la función header() y en el uso de una tabla “Usuario” de la base de datos. (PDO).</h1>
     </header>
     <section>
         <article>
         <?php
-            show_source("../codigo/ejercicio2.php");
+            show_source("../codigoPHP/ejercicio2.php");
         ?>
         </article>
     </section>

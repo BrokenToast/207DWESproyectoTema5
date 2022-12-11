@@ -11,12 +11,12 @@
 </head>
 <body>
     <header>
-        <h1>1.Conexión a la base de datos con la cuenta usuario y tratamiento de errores.</h1>
+        <h1>0. Mostrar el contenido de las variables superglobales y phpinfo().</h1>
     </header>
     <section>
         <article>
         <?php
-            show_source("../codigo/ejercicio0.php");
+            show_source("../codigoPHP/ejercicio0.php");
         ?>
         </article>
     </section>
